@@ -11,5 +11,8 @@ function submit(){
         alertForm.textContent = "Data diterima";
         alertForm.className = "text-green-700";
         alertForm.style.display = "block";
+        forename.value = '';
+        surname.value = '';
+        age.value = '';
     }                 
 }
