@@ -5,14 +5,21 @@ const alertForm = document.getElementById("alert-form")
 
 function submit(){
     if(forename.value.trim() === '' || surname.value.trim() === '' || age.value.trim() === ''){
-        alertForm.className = "text-red-700";
-        alertForm.style.display = "block";
+        alertForm.className = "text-red-700"
+        alertForm.style.display = "block"
     } else {
-        alertForm.textContent = "Data diterima";
-        alertForm.className = "text-green-700";
-        alertForm.style.display = "block";
-        forename.value = '';
-        surname.value = '';
-        age.value = '';
-    }                 
+        alertForm.textContent = "Data diterima"
+        alertForm.className = "text-green-700"
+        alertForm.style.display = "block"
+        forename.value = ''
+        surname.value = ''
+        age.value = ''
+    } 
+    
+    setTimeout(() => {
+        if(alertForm){
+            alertForm.style.display = "none"
+            alertForm.textContent = "Formulir masih kosong, mohon diisi"
+        }
+    }, 2000);
 }
