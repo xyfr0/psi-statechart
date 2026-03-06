@@ -6,7 +6,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <div class="flex items-center justify-center h-screen">
+    <div class="flex flex-col items-center justify-center h-screen">
         <div>
             <h1 class="text-3xl font-bold underline">
                 Data Entry Form 
@@ -15,12 +15,26 @@
                 Insert your data below
             </h2>
         </div>
-        <div>
-          <input type="text" placeholder="Enter your forename" class="border border-gray-300 rounded px-4 py-2 mb-4" />
-          <input type="text" placeholder="Enter your surname" class="border border-gray-300 rounded px-4 py-2 mb-4" /> 
-          <input type="number" placeholder="Enter your age" class="border border-gray-300 rounded px-4 py-2 mb-4" />
-          <button class="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
+        <div class="m-10 gap-4" id="forms">
+          <div class="p-1">
+            <p>Forename</p>
+            <input type="text" class="border" id="forename">
+          </div>
+          <div class="p-1">
+            <p>Surname</p>
+            <input type="text" class="border" id="surname">
+          </div>
+          <div class="p-1">
+            <p>Age</p>
+            <input type="number" class="border" id="age">
+          </div>
+        </div>
+        <div class="flex flex-col items-center" id="button">
+          <button type="button" class="border border-grey-500 bg-sky-200 hover:bg-sky-400 cursor-pointer w-46" onclick="submit()" id="submit-button">Submit</button>
+          <p class="text-red-700" style="display: none;" id="alert-form">Formulir masih kosong, mohon diisi</p>
         </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
